@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 app.post("/submit", (req, res) => {
   console.log("Form data received:", req.body);
